@@ -26,9 +26,9 @@
 #define MY_SRC_MAC0	0x08
 #define MY_SRC_MAC1	0x00
 #define MY_SRC_MAC2	0x27
-#define MY_SRC_MAC3	0x0B
-#define MY_SRC_MAC4	0x82
-#define MY_SRC_MAC5	0x6C
+#define MY_SRC_MAC3	0x7C
+#define MY_SRC_MAC4	0x4e
+#define MY_SRC_MAC5	0xd9
 
 #define DEFAULT_IF	"ens18"
 #define BUF_SIZ		1024
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
     memset(&ptp_delay_req_h, 0, sizeof(struct ptp_delay_req));
     ptp_delay_req_h.hdr.msg_type = 0x12;
     ptp_delay_req_h.hdr.ptp_ver = 0x02;
-    ptp_delay_req_h.hdr.msg_len = 0x0036;
+    ptp_delay_req_h.hdr.msg_len = 0x0022;
     ptp_delay_req_h.hdr.msg_len = htons(ptp_delay_req_h.hdr.msg_len);
     ptp_delay_req_h.hdr.domain_num = 0;
     ptp_delay_req_h.hdr.res = 0;
